@@ -1,0 +1,52 @@
+name: Sync Google Drive → GitHub Pages
+
+on:
+  # 每天台灣時間 08:00 自動同步（UTC+8 = UTC 00:00）
+  schedule:
+    - cron: '0 0 * * *'
+  # 手動觸發（Repo → Actions → Run workflow）
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 允許 commit & push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # 2. Python 環境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 3. 安裝依賴
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth
+
+      # 4. 執行同步腳本
+      - name: Sync data from Google Drive
+        env:
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+        run: python scripts/fetch_drive.py
+
+      # 5. 如果有變更就 commit & push
+      - name: Commit & push if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "✅ 資料無變更，略過 commit"
+          else
+            MONTH=$(date +%Y/%m)
+            git commit -m "chore: sync report data ${MONTH} [skip ci]"
+            git push
+            echo "🚀 已推送更新"
+          fi
