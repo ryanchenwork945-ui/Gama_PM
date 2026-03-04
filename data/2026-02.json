@@ -1,0 +1,32 @@
+{
+  "year": 2026,
+  "month": 2,
+  "generated": "2026-03-04",
+  "kpi": {
+    "released": 2,
+    "testing": 2,
+    "inProgress": 10
+  },
+  "sections": {
+    "released": [
+      { "endDate": "2026-02-25", "name": "ECR-112003_SP6_H2", "summary": "修正 Member Session Gift Detail Report無法匯出 Excel" },
+      { "endDate": "2026-02-26", "name": "T2503_H5", "summary": "修正KS抽紅包兌換隔日券印票失敗" }
+    ],
+    "testing": [
+      { "startDate": "2026-02-23", "name": "ECR-112003_SP6_H2", "summary": "修正 Member Session Gift Detail Report無法匯出 Excel" },
+      { "startDate": "2026-02-23", "name": "T2503_H5", "summary": "修正KS抽紅包兌換隔日券印票失敗" }
+    ],
+    "inProgress": [
+      { "name": "Kiosk 國外版", "summary": "修復國外Kiosk並整併部分國內功能" },
+      { "name": "Promotion 重構", "summary": "調整架構加快運算速度，以及現場需求" },
+      { "name": "Pagcor需求-R3", "summary": "Pagcor Q1、Q2需求" },
+      { "name": "T2601", "summary": "Promotion V2、現場需求、部分容器化、Floor Reset 整合" },
+      { "name": "G2601", "summary": "國外Kiosk" },
+      { "name": "系統更新、維護優化 phase 1 - Web模組容器化", "summary": "Web模組 導入容器化，透過docker更新" },
+      { "name": "金磚 新KIOSK 支援(軟體調整)", "summary": "支援RWD、串接新硬體" },
+      { "name": "奇王專案 Phase1", "summary": "推幣機、東海龍珠串接" },
+      { "name": "Bingo Monitor System", "summary": "Pagcor賓果場監管系統" },
+      { "name": "ECR-112003_SP7", "summary": "Pagcor Q1需求" }
+    ]
+  }
+}
