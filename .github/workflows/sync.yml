@@ -18,6 +18,8 @@ jobs:
       # 1. Checkout
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # 2. Python 環境
       - name: Set up Python
@@ -46,8 +48,8 @@ jobs:
             echo "✅ 資料無變更，略過 commit"
           else
             MONTH=$(date +%Y/%m)
-            git commit -m "chore: sync report data ${MONTH} [skip ci]"
             git pull --rebase origin main
+            git commit -m "chore: sync report data ${MONTH} [skip ci]"
             git push
             echo "🚀 已推送更新"
           fi
