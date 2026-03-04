@@ -43,12 +43,12 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add data/
           if git diff --cached --quiet; then
             echo "✅ 資料無變更，略過 commit"
           else
             MONTH=$(date +%Y/%m)
-            git pull --rebase origin main
             git commit -m "chore: sync report data ${MONTH} [skip ci]"
             git push
             echo "🚀 已推送更新"
