@@ -26,10 +26,10 @@ body {
 .container { max-width: 860px; margin: 0 auto; padding: 28px 18px 40px; }
 
 /* Header */
-.header { display: flex; align-items: center; justify-content: space-between; }
-.logo { flex-shrink: 0; }
-.logo img { height: 40px; width: auto; display: block; }
-.header h1 { margin: 0; font-size: 28px; color: var(--primary); letter-spacing: .2px; }
+.header { position: relative; }
+.logo { position: absolute; top: 13px; right: 0; }
+.logo img { height: 55px; width: auto; display: block; }
+.header h1 { margin: 0; font-size: 28px; color: var(--primary); letter-spacing: .2px; padding-right: 210px; }
 .header-divider { height: 3px; background: var(--accent); margin: 18px 0 0; }
 
 /* Month Selector Bar */
@@ -141,8 +141,8 @@ td.empty, .empty-state { color: var(--empty-text); font-style: italic; }
 @media (max-width: 760px) {
   .kpi-row { flex-wrap: wrap; }
   .kpi-card { flex: 1 1 100%; }
-  .header { flex-wrap: wrap; }
-  .header h1 { font-size: 22px; }
+  .header h1 { padding-right: 0; }
+  .logo { position: static; margin-top: 10px; }
   .month-meta { display: none; }
 }
 </style>
