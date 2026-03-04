@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gama 專案月報</title>
+<style>
+:root {
+  --primary: #1a2e4a;
+  --accent: #c9a84c;
+  --bg: #f4f6f9;
+  --header-bg: #253d5b;
+  --stripe: #eef1f5;
+  --hover: #dde4ef;
+  --border: #d8dde6;
+  --date-text: #555555;
+  --empty-text: #aaaaaa;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+  color: #111827;
+}
+.container { max-width: 860px; margin: 0 auto; padding: 28px 18px 40px; }
+
+/* Header */
+.header { position: relative; }
+.logo { position: absolute; top: 13px; right: 0; }
+.logo img { height: 55px; width: auto; display: block; }
+.header h1 { margin: 0; font-size: 28px; color: var(--primary); letter-spacing: .2px; padding-right: 210px; }
+.header-divider { height: 3px; background: var(--accent); margin: 18px 0 0; }
+
+/* Month Selector Bar */
+.month-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 22px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.month-bar label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+}
+.month-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231a2e4a' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 36px 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s;
+  min-width: 140px;
+}
+.month-select:hover { border-color: var(--accent); }
+.month-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201,168,76,.2); }
+.month-meta {
+  margin-left: auto;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* KPI */
+.kpi-row { display: flex; gap: 16px; margin: 0 0 28px; }
+.kpi-card {
+  flex: 1 1 0; min-width: 0;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px; position: relative;
+}
+.kpi-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--primary); border-top-left-radius: 10px; border-top-right-radius: 10px;
+}
+.kpi-top { display: flex; justify-content: center; margin-top: 6px; font-size: 13px; color: #333; }
+.kpi-value { margin-top: 10px; text-align: center; font-size: 28px; font-weight: 700; color: var(--primary); }
+
+/* Section */
+.section-title {
+  font-size: 18px; font-weight: 700; margin: 26px 0 12px;
+  padding-left: 12px; border-left: 4px solid var(--accent); color: #0f172a;
+}
+
+/* Table */
+.report-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+}
+thead th {
+  background: var(--header-bg); color: #fff; text-align: left;
+  font-size: 13px; font-weight: 700; padding: 16px; border-bottom: 2px solid var(--accent);
+}
+tbody td {
+  padding: 16px; border-bottom: 1px solid var(--border);
+  vertical-align: top; font-size: 14px;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: var(--stripe); }
+tbody tr:hover td { background: var(--hover); }
+
+td.date {
+  white-space: nowrap; font-size: 12px; color: var(--date-text);
+  font-family: "JetBrains Mono", Consolas, Menlo, monospace; font-weight: 600; letter-spacing: .2px;
+}
+td.name .proj-name { font-weight: 700; color: var(--primary); line-height: 1.3; }
+td.name .proj-id { margin-top: 4px; font-size: 12px; color: #6b7280; font-family: "JetBrains Mono", Consolas, monospace; }
+td.summary { line-height: 1.55; }
+td.empty, .empty-state { color: var(--empty-text); font-style: italic; }
+.empty-state { text-align: center; padding: 20px 16px; }
+
+.footer { margin-top: 28px; font-size: 12px; color: #64748b; text-align: right; }
+
+/* Loading / Error */
+.loading-state {
+  text-align: center; padding: 60px 20px;
+  color: #94a3b8; font-size: 14px;
+}
+.loading-spinner {
+  width: 32px; height: 32px; margin: 0 auto 16px;
+  border: 3px solid var(--border); border-top-color: var(--accent);
+  border-radius: 50%; animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-state {
+  text-align: center; padding: 40px 20px;
+  color: #ef4444; font-size: 14px;
+}
+
+/* Fade-in */
+.content-area { animation: fadeIn .3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 760px) {
+  .kpi-row { flex-wrap: wrap; }
+  .kpi-card { flex: 1 1 100%; }
+  .header h1 { padding-right: 0; }
+  .logo { position: static; margin-top: 10px; }
+  .month-meta { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Gama 專案月報</h1>
+    <div class="logo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBAAAAGeCAYAAAAt5/L/AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAOg9JREFUeNrs3c1xG8faP+yxy3vqH4FwIhDPgmtCEYhnzypBEYiOQFAEpiIQVKX9oSLwcK2FpQgOGMErRqB32mz4oWWAIL7n7r6uKhT9SQ16vu7+TXfPT9+/f28AAAAAHvKzJgAAAACWESAAAAAASwkQAAAAgKUECAAAAMBSAgQAAABgKQECAAAAsJQAAQAAAFhKgAAAAAAsJUAAAAAAlhIgAAAAAEsJEAAAAIClBAgAAADAUgIEAAAAYCkBAgAAALCUAAEAAABYSoAAAAAALCVAAAAAAJYSIAAAAABLCRAAAACApQQIAAAAwFICBAAAAGApAQIAAACwlAABAAAAWEqAAAAAACwlQAAAAACWEiAAAAAASwkQAAAAgKUECAAAAMBSAgQAAABgKQECAAAAsJQAAQAAAFhKgAAAAAAsJUAAAAAAlhIgAAAAAEsJEAAAAIClBAgAAADAUgIEAAAAYCkBAgAAALCUAAEAAABYSoAAAAAALCVAAAAAAJYSIAAAAABLCRAAAACApQQIAAAAwFICBAAAAGApAQIAAACwlAABAAAAWEqAAAAAACwlQAAAAACWEiAAAAAASwkQAAAAgKUECAAAAMBSAgQAAABgKQECAAAAsJQAAQAAAFhKgAAAAAAsJUAAAAAAlhIgAAAAAEsJEAAAAIClBAgAAADAUgIEAAAAYCkBAgAAALCUAAEAAABYSoAAAAAALCVAAAAAAJYSIAAAAABLCRAAAACApQQIAAAAwFICBAAAAGApAQIAAACwlAABAAAAWEqAAAAAACz1iyYAAGozODkfpB/5b4dL/vMv3efb/b+ffv74TSsCUJufvn//rhUAgCINTs6Pux/pM2jugoL08+kW/4jr/LNt7kKGFDYIGAAokgABACjG4OR82NwFBelzesBNuWlymNB92unnj629A0B0AgQAIKzByfmT7sdZ/rzo+eam0QpXzV2g8MXeAyAaAQIAEEqw0GCRNEIhhQkTYQIAUQgQ+lUQ3Z+nmX4+yZ9nWmfvbpu7YadN83+LZ7XdZ9oVelPNA3Cw++RFDg6OCvpqKUyYNHdhgnsMAAIE/lEEpWBgeO8jJIgjhQvt7OPJETu4Pgy6H+N8bXhawfk0O4em9z/mjHPvnDjLwcFpBV/3U/e5dPxDuLp+1NyFm6daZGt1wWxhWgvUChCqv7ikTsELLVKM2TDUFCZcaQ42vE5cdj9ea4m/fM1FQ5vPsakmqep8SPfMcVN+kLbo2E9BwsSRAL2+TqW6fqvUdepe5fTtIuA+AxDg/wA9IBMGhWQgbwAAAABJRU5ErkJggg==" alt="GAMA Logo">
+    </div>
+    <div class="header-divider"></div>
+  </div>
+
+  <!-- Month Selector Bar -->
+  <div class="month-bar">
+    <label for="monthSelect">📅 選擇月份</label>
+    <select id="monthSelect" class="month-select">
+      <option value="">載入中...</option>
+    </select>
+    <span class="month-meta" id="generatedMeta"></span>
+  </div>
+
+  <!-- Dynamic Content -->
+  <div id="reportContent">
+    <div class="loading-state">
+      <div class="loading-spinner"></div>
+      <div>載入資料中...</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const BASE_URL = './data';
+
+  // 載入 manifest，建立下拉選單
+  async function loadManifest() {
+    try {
+      const res = await fetch(`${BASE_URL}/manifest.json`);
+      if (!res.ok) throw new Error('無法載入月份清單');
+      const manifest = await res.json();
+
+      const select = document.getElementById('monthSelect');
+      select.innerHTML = '';
+      manifest.months.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m.key;
+        opt.textContent = m.label;
+        if (m.key === manifest.latest) opt.selected = true;
+        select.appendChild(opt);
+      });
+
+      select.addEventListener('change', () => loadReport(select.value));
+      loadReport(manifest.latest);
+    } catch (err) {
+      document.getElementById('reportContent').innerHTML =
+        `<div class="error-state">⚠️ ${err.message}</div>`;
+    }
+  }
+
+  // 載入指定月份的報告資料
+  async function loadReport(key) {
+    const content = document.getElementById('reportContent');
+    content.innerHTML = `<div class="loading-state"><div class="loading-spinner"></div><div>載入中...</div></div>`;
+
+    try {
+      const res = await fetch(`${BASE_URL}/${key}.json`);
+      if (!res.ok) throw new Error(`找不到 ${key} 的資料`);
+      const data = await res.json();
+      renderReport(data);
+    } catch (err) {
+      content.innerHTML = `<div class="error-state">⚠️ ${err.message}</div>`;
+    }
+  }
+
+  // 渲染報告內容
+  function renderReport(data) {
+    document.getElementById('generatedMeta').textContent = `最後更新：${data.generated}`;
+
+    const html = `
+      <div class="content-area">
+        <!-- KPI -->
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-top"><span>已 Release 需求</span></div>
+            <div class="kpi-value">${data.kpi.released}</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-top"><span>進測中專案</span></div>
+            <div class="kpi-value">${data.kpi.testing}</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-top"><span>進行中專案</span></div>
+            <div class="kpi-value">${data.kpi.inProgress}</div>
+          </div>
+        </div>
+
+        <!-- Release 專案 -->
+        <div class="section-title">Release 專案／需求</div>
+        <table class="report-table">
+          <thead><tr>
+            <th>End Date</th><th>Project Name</th><th>Project Summary</th>
+          </tr></thead>
+          <tbody>
+            ${data.sections.released.length ? data.sections.released.map(r => `
+              <tr>
+                <td class="date">${r.endDate}</td>
+                <td class="name"><div class="proj-name">${escHtml(r.name)}</div></td>
+                <td class="summary">${escHtml(r.summary)}</td>
+              </tr>`).join('') : `<tr><td colspan="3" class="empty-state">本月無 Release 專案</td></tr>`}
+          </tbody>
+        </table>
+
+        <!-- 進測專案 -->
+        <div class="section-title">進測專案</div>
+        <table class="report-table">
+          <thead><tr>
+            <th>Start Date</th><th>Project Name</th><th>Project Summary</th>
+          </tr></thead>
+          <tbody>
+            ${data.sections.testing.length ? data.sections.testing.map(r => `
+              <tr>
+                <td class="date">${r.startDate}</td>
+                <td class="name"><div class="proj-name">${escHtml(r.name)}</div></td>
+                <td class="summary">${escHtml(r.summary)}</td>
+              </tr>`).join('') : `<tr><td colspan="3" class="empty-state">本月無進測專案</td></tr>`}
+          </tbody>
+        </table>
+
+        <!-- 進行中專案 -->
+        <div class="section-title">進行中專案</div>
+        <table class="report-table">
+          <thead><tr>
+            <th>Project Name</th><th>Project Summary</th>
+          </tr></thead>
+          <tbody>
+            ${data.sections.inProgress.length ? data.sections.inProgress.map(r => `
+              <tr>
+                <td class="name"><div class="proj-name">${escHtml(r.name)}</div></td>
+                <td class="summary">${escHtml(r.summary)}</td>
+              </tr>`).join('') : `<tr><td colspan="2" class="empty-state">本月無進行中專案</td></tr>`}
+          </tbody>
+        </table>
+
+        <div class="footer">Generated · ${data.generated}</div>
+      </div>`;
+
+    document.getElementById('reportContent').innerHTML = html;
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  loadManifest();
+</script>
+</body>
+</html>
