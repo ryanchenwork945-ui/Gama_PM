@@ -12,7 +12,7 @@
       {
         "endDate": "2026-01-13",
         "name": "T2503_H2",
-        "summary": ""
+        "summary": "解決無法設定當日隔日卷時間問題"
       },
       {
         "endDate": "2026-01-23",
@@ -22,17 +22,17 @@
       {
         "endDate": "2026-01-30",
         "name": "T2503_SP1",
-        "summary": ""
+        "summary": "A5相關需求 及現場問題修正"
       },
       {
         "endDate": "2026-01-26",
         "name": "T2503_H4",
-        "summary": ""
+        "summary": "修正APP摸彩券快速領獎安全性驗證金額對照欄位錯誤"
       },
       {
         "endDate": "2026-01-14",
         "name": "T2503_H3",
-        "summary": ""
+        "summary": "解決隔日卷沒有考慮到 CUSTOM_TKT_MODE 參數的問題 解決龍虎榜獎項缺少導致的切榜失敗問題"
       },
       {
         "endDate": "2026-01-30",
@@ -51,8 +51,8 @@
       },
       {
         "endDate": "2026-01-05",
-        "name": "R2",
-        "summary": ""
+        "name": "ECR-112003_SP6_R2",
+        "summary": "問題修正"
       }
     ],
     "testing": [
@@ -64,22 +64,22 @@
       {
         "startDate": "2026-01-09",
         "name": "T2503_H2",
-        "summary": ""
+        "summary": "解決無法設定當日隔日卷時間問題"
       },
       {
         "startDate": "2026-01-20",
         "name": "ECR-112003_H4",
-        "summary": ""
+        "summary": "越南報表調整 GI整合之前主線的改動"
       },
       {
         "startDate": "2026-01-23",
         "name": "T2503_H4",
-        "summary": ""
+        "summary": "修正APP摸彩券快速領獎安全性驗證金額對照欄位錯誤"
       },
       {
         "startDate": "2026-01-13",
         "name": "T2503_H3",
-        "summary": ""
+        "summary": "解決隔日卷沒有考慮到 CUSTOM_TKT_MODE 參數的問題 解決龍虎榜獎項缺少導致的切榜失敗問題"
       }
     ],
     "inProgress": [
@@ -89,7 +89,7 @@
       },
       {
         "name": "Play Park",
-        "summary": ""
+        "summary": "客戶需求"
       },
       {
         "name": "Promotion 重構",
@@ -109,7 +109,7 @@
       },
       {
         "name": "G2501_SP1",
-        "summary": ""
+        "summary": "Pagcor 2025 Q4 需求"
       },
       {
         "name": "系統更新、維護優化 phase 1 - Web模組容器化",
@@ -133,7 +133,7 @@
       },
       {
         "name": "Play Park - ATM",
-        "summary": ""
+        "summary": "ATM 相關Survey"
       },
       {
         "name": "ECR-112003_SP7",
@@ -141,7 +141,7 @@
       },
       {
         "name": "ECR-112003_H4",
-        "summary": ""
+        "summary": "越南報表調整 GI整合之前主線的改動"
       }
     ]
   }
