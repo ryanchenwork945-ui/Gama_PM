@@ -19,11 +19,7 @@
         "name": "ECR-112003_SP6_R2",
         "summary": "問題修正"
       },
-      {
-        "endDate": "2026-01-07",
-        "name": "ECR-112003_SP6",
-        "summary": ""
-      },
+
       {
         "endDate": "2026-01-13",
         "name": "T2503_H2",
