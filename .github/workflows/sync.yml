@@ -47,6 +47,7 @@ jobs:
           else
             MONTH=$(date +%Y/%m)
             git commit -m "chore: sync report data ${MONTH} [skip ci]"
+            git pull --rebase origin main
             git push
             echo "🚀 已推送更新"
           fi
