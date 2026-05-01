@@ -1,0 +1,124 @@
+{
+  "year": 2026,
+  "month": 4,
+  "generated": "2026-05-01",
+  "kpi": {
+    "released": 0,
+    "testing": 11,
+    "inProgress": 13
+  },
+  "sections": {
+    "released": [],
+    "testing": [
+      {
+        "startDate": "2026-04-07",
+        "name": "G2501_SP1_H2第1次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-07",
+        "name": "G2501_SP1_H2第1次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-10",
+        "name": "G2501_SP1_H2第2次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-10",
+        "name": "G2501_SP1_H2第2次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-15",
+        "name": "G2501_SP1_H2第3次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-15",
+        "name": "G2501_SP1_H2第3次進測",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-16",
+        "name": "T2503_SP1_H2",
+        "summary": "A9 & AM 需求"
+      },
+      {
+        "startDate": "2026-04-17",
+        "name": "ECR-112003_SP7_R3",
+        "summary": "• PAGCOR 需求 • ECR-112003_SP6 H1 & H2 整併 • 現場問題"
+      },
+      {
+        "startDate": "2026-04-20",
+        "name": "ECR-112003_SP7_R3測試",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-04-24",
+        "name": "G2501_SP2",
+        "summary": "Table Lottery"
+      },
+      {
+        "startDate": "2026-04-24",
+        "name": "T2601_R6測試",
+        "summary": ""
+      }
+    ],
+    "inProgress": [
+      {
+        "name": "Kiosk 國外版",
+        "summary": "修復國外Kiosk並整併部分國內功能"
+      },
+      {
+        "name": "Play Park",
+        "summary": "客戶需求"
+      },
+      {
+        "name": "Promotion 重構",
+        "summary": "調整架構加快運算速度，以及現場需求"
+      },
+      {
+        "name": "Pagcor需求-R3",
+        "summary": "Pagcor Q1、Q2需求"
+      },
+      {
+        "name": "App功能優化",
+        "summary": "[App功能優化] 會員主頁按鈕調整(新增/排序)、App 序號禮包功能(產/兌換)、摸彩卷 查詢/兌換(參加摸彩)"
+      },
+      {
+        "name": "G2601",
+        "summary": "國外Kiosk"
+      },
+      {
+        "name": " 下半年Admin 相關整合 Survey",
+        "summary": ""
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)",
+        "summary": "支援RWD、串接新硬體"
+      },
+      {
+        "name": "修繕Issue",
+        "summary": ""
+      },
+      {
+        "name": "壓測處理",
+        "summary": ""
+      },
+      {
+        "name": "T2503_SP1_H2",
+        "summary": "A9 & AM 需求"
+      },
+      {
+        "name": "G2501_SP2",
+        "summary": "Table Lottery"
+      },
+      {
+        "name": "T2601_R6測試",
+        "summary": ""
+      }
+    ]
+  }
+}
