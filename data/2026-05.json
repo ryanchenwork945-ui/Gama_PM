@@ -1,0 +1,61 @@
+{
+  "year": 2026,
+  "month": 5,
+  "generated": "2026-06-01",
+  "kpi": {
+    "released": 2,
+    "testing": 1,
+    "inProgress": 7
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-05-07",
+        "name": "T2601_R6測試",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-05-08",
+        "name": "壓測處理",
+        "summary": ""
+      }
+    ],
+    "testing": [
+      {
+        "startDate": "2026-05-25",
+        "name": "T2601_R7測試",
+        "summary": ""
+      }
+    ],
+    "inProgress": [
+      {
+        "name": "T2601_R7測試",
+        "summary": ""
+      },
+      {
+        "name": " 下半年Admin 相關整合 Survey",
+        "summary": ""
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)",
+        "summary": "支援RWD、串接新硬體"
+      },
+      {
+        "name": "App功能優化",
+        "summary": "[App功能優化] 會員主頁按鈕調整(新增/排序)、App 序號禮包功能(產/兌換)、摸彩卷 查詢/兌換(參加摸彩)"
+      },
+      {
+        "name": "Pagcor需求-R3",
+        "summary": "Pagcor Q1、Q2需求"
+      },
+      {
+        "name": "Promotion 重構",
+        "summary": "調整架構加快運算速度，以及現場需求"
+      },
+      {
+        "name": "Play Park",
+        "summary": "客戶需求"
+      }
+    ]
+  }
+}
