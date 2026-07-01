@@ -1,0 +1,108 @@
+{
+  "year": 2026,
+  "month": 6,
+  "generated": "2026-07-01",
+  "kpi": {
+    "released": 1,
+    "testing": 5,
+    "inProgress": 15
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-06-02",
+        "name": "G2501_SP2_H1",
+        "summary": ""
+      }
+    ],
+    "testing": [
+      {
+        "startDate": "2026-06-01",
+        "name": "G2501_SP2_H1",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-06-03",
+        "name": "ECR-112003_SP7_H1",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-06-03",
+        "name": "ECR-112003_SP6_H3",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-06-09",
+        "name": "T2503_SP1_H4測試",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-06-09",
+        "name": "GMS2601_R1測試",
+        "summary": ""
+      }
+    ],
+    "inProgress": [
+      {
+        "name": "G2501_SP3",
+        "summary": ""
+      },
+      {
+        "name": "2026 - Table專案",
+        "summary": ""
+      },
+      {
+        "name": "2026 - C++專案",
+        "summary": ""
+      },
+      {
+        "name": "正式啟用",
+        "summary": ""
+      },
+      {
+        "name": "營運後需求",
+        "summary": ""
+      },
+      {
+        "name": "JumboClub驗證 ",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System",
+        "summary": "Pagcor賓果場監管系統"
+      },
+      {
+        "name": "離線票務系統",
+        "summary": "GCMS停止服務時，維持機台、工作站、KIOSK票務正常運作；GCMS恢復時，將離線票務資料同步回GCMS"
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)",
+        "summary": "支援RWD、串接新硬體"
+      },
+      {
+        "name": "T2601",
+        "summary": "Promotion V2、現場需求、部分容器化、Floor Reset 整合"
+      },
+      {
+        "name": "App功能優化",
+        "summary": "[App功能優化] 會員主頁按鈕調整(新增/排序)、App 序號禮包功能(產/兌換)、摸彩卷 查詢/兌換(參加摸彩)"
+      },
+      {
+        "name": "Pagcor需求-R3",
+        "summary": "Pagcor Q1、Q2需求"
+      },
+      {
+        "name": "APP 任務系統 功能擴充",
+        "summary": ""
+      },
+      {
+        "name": "Promotion 重構",
+        "summary": "調整架構加快運算速度，以及現場需求"
+      },
+      {
+        "name": "Play Park",
+        "summary": "客戶需求"
+      }
+    ]
+  }
+}
