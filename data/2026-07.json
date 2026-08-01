@@ -1,0 +1,213 @@
+{
+  "year": 2026,
+  "month": 7,
+  "generated": "2026-08-01",
+  "kpi": {
+    "released": 1,
+    "testing": 2,
+    "inProgress": 45
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-07-28",
+        "name": "2026Q1 (ECR-112003_SP7)",
+        "summary": ""
+      }
+    ],
+    "testing": [
+      {
+        "startDate": "2026-07-01",
+        "name": "G2501_SP3_R1測試",
+        "summary": ""
+      },
+      {
+        "startDate": "2026-07-16",
+        "name": "GMS2601_R3測試",
+        "summary": ""
+      }
+    ],
+    "inProgress": [
+      {
+        "name": "Online game regstration/verification platform (1)",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Eason",
+        "summary": ""
+      },
+      {
+        "name": "Promotion 重構-Jackson",
+        "summary": ""
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)-Ray",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Jimmy",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Casey",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Jimmy",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Faust",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Jackson",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Jason",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Ken",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Yi",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Louis",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Ray",
+        "summary": ""
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)-Eason",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Moy",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Jimmy",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Louis",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Angus",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Faust",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Moy",
+        "summary": ""
+      },
+      {
+        "name": "App功能優化-Hans",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Alyce",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Dylan",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Jackson",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Eason",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Dylan",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Jason",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Yi",
+        "summary": ""
+      },
+      {
+        "name": "設定介面統一、優化 phase 2 - Config整合admin、重構-Ivory",
+        "summary": ""
+      },
+      {
+        "name": "Promotion 重構-Ken",
+        "summary": ""
+      },
+      {
+        "name": "App功能優化-Alyce",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System-Ivory",
+        "summary": ""
+      },
+      {
+        "name": "T2601-Hans",
+        "summary": ""
+      },
+      {
+        "name": "2026 - Table專案",
+        "summary": ""
+      },
+      {
+        "name": "2026 - C++專案",
+        "summary": ""
+      },
+      {
+        "name": "正式啟用",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System",
+        "summary": "Pagcor賓果場監管系統"
+      },
+      {
+        "name": " 設定介面統一、優化 phase 2 - Config整合admin、重構",
+        "summary": "Config WK 全功能(包含license部分)整進 Web Admin、Web Admin 全功能分類(UI/UX) 實做、Web Admin 可流程化設定 實做"
+      },
+      {
+        "name": "金磚 新KIOSK 支援(軟體調整)",
+        "summary": "支援RWD、串接新硬體"
+      },
+      {
+        "name": "T2601",
+        "summary": "Promotion V2、現場需求、部分容器化、Floor Reset 整合"
+      },
+      {
+        "name": "App功能優化",
+        "summary": "[App功能優化] 會員主頁按鈕調整(新增/排序)、App 序號禮包功能(產/兌換)、摸彩卷 查詢/兌換(參加摸彩)"
+      },
+      {
+        "name": "Pagcor需求-R3",
+        "summary": "Pagcor Q1、Q2需求"
+      },
+      {
+        "name": "APP 任務系統 功能擴充",
+        "summary": ""
+      },
+      {
+        "name": "Promotion 重構",
+        "summary": "調整架構加快運算速度，以及現場需求"
+      }
+    ]
+  }
+}
