@@ -1,0 +1,98 @@
+{
+  "year": 2026,
+  "month": 8,
+  "generated": "2026-09-01",
+  "kpi": {
+    "released": 5,
+    "testing": 0,
+    "inProgress": 14
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-08-01",
+        "name": "開發-外部串接",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-08-08",
+        "name": "App 媒體檔案儲存機制重構",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-08-14",
+        "name": "Promotion 重構",
+        "summary": "調整架構加快運算速度，以及現場需求"
+      },
+      {
+        "endDate": "2026-08-25",
+        "name": "ECR-112003_SP7_H3",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-08-26",
+        "name": "T2601_R9測試",
+        "summary": ""
+      }
+    ],
+    "testing": [],
+    "inProgress": [
+      {
+        "name": "G2501_SP3_H1",
+        "summary": ""
+      },
+      {
+        "name": "AI Forge",
+        "summary": ""
+      },
+      {
+        "name": "Junket開發",
+        "summary": ""
+      },
+      {
+        "name": "T2602",
+        "summary": ""
+      },
+      {
+        "name": "GMS2601",
+        "summary": ""
+      },
+      {
+        "name": "開發-Config整合admin重構",
+        "summary": ""
+      },
+      {
+        "name": "Online game regstration/verification platform",
+        "summary": ""
+      },
+      {
+        "name": "2026 - Table專案",
+        "summary": ""
+      },
+      {
+        "name": "營運後需求",
+        "summary": ""
+      },
+      {
+        "name": "ECR-112003_SP8",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System",
+        "summary": "Pagcor賓果場監管系統"
+      },
+      {
+        "name": " 設定介面統一、優化 phase 2 - Config整合admin、重構",
+        "summary": "Config WK 全功能(包含license部分)整進 Web Admin、Web Admin 全功能分類(UI/UX) 實做、Web Admin 可流程化設定 實做"
+      },
+      {
+        "name": "T2601",
+        "summary": "Promotion V2、現場需求、部分容器化、Floor Reset 整合"
+      },
+      {
+        "name": "Play Park",
+        "summary": "客戶需求"
+      }
+    ]
+  }
+}
