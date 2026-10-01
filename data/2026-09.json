@@ -1,0 +1,67 @@
+{
+  "year": 2026,
+  "month": 9,
+  "generated": "2026-10-01",
+  "kpi": {
+    "released": 2,
+    "testing": 0,
+    "inProgress": 10
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-09-02",
+        "name": "T2503_SP1_H2",
+        "summary": "A9 & AM 需求"
+      },
+      {
+        "endDate": "2026-09-04",
+        "name": "G2501_SP3_H1",
+        "summary": ""
+      }
+    ],
+    "testing": [],
+    "inProgress": [
+      {
+        "name": "T2601_SP1",
+        "summary": ""
+      },
+      {
+        "name": "Junket 模組Phase2",
+        "summary": ""
+      },
+      {
+        "name": "AI Forge",
+        "summary": ""
+      },
+      {
+        "name": "T2602",
+        "summary": ""
+      },
+      {
+        "name": "GMS2601",
+        "summary": ""
+      },
+      {
+        "name": "開發-Config整合admin重構",
+        "summary": ""
+      },
+      {
+        "name": "2026 - Table專案",
+        "summary": ""
+      },
+      {
+        "name": " 設定介面統一、優化 phase 2 - Config整合admin、重構",
+        "summary": "Config WK 全功能(包含license部分)整進 Web Admin、Web Admin 全功能分類(UI/UX) 實做、Web Admin 可流程化設定 實做"
+      },
+      {
+        "name": "G2601",
+        "summary": "國外Kiosk"
+      },
+      {
+        "name": "Pagcor需求-R3",
+        "summary": "Pagcor Q1、Q2需求"
+      }
+    ]
+  }
+}
