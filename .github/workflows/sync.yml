@@ -56,3 +56,18 @@ jobs:
             git push
             echo "🚀 已推送更新"
           fi
+
+      # 失敗通知：上面任一步失敗就推 Telegram（需要 repo secrets TG_TOKEN、TG_CHAT_ID）
+      - name: Notify Telegram on failure
+        if: failure()
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          REPO: ${{ github.repository }}
+          WORKFLOW: ${{ github.workflow }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          MSG=$(printf '⚠️ GitHub Actions 失敗\nrepo: %s\nworkflow: %s\n%s' "$REPO" "$WORKFLOW" "$RUN_URL")
+          curl -sS -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TG_CHAT_ID}" \
+            --data-urlencode "text=${MSG}"
