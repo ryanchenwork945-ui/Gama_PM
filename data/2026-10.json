@@ -1,0 +1,73 @@
+{
+  "year": 2026,
+  "month": 10,
+  "generated": "2026-11-01",
+  "kpi": {
+    "released": 4,
+    "testing": 0,
+    "inProgress": 9
+  },
+  "sections": {
+    "released": [
+      {
+        "endDate": "2026-10-06",
+        "name": "G2501_SP3_H2",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-10-06",
+        "name": "G2501_SP3_H2測試",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-10-10",
+        "name": "高雄報表需求",
+        "summary": ""
+      },
+      {
+        "endDate": "2026-10-27",
+        "name": "新KIOSK軟體調整",
+        "summary": ""
+      }
+    ],
+    "testing": [],
+    "inProgress": [
+      {
+        "name": "Kiosk國外版Bug修復",
+        "summary": ""
+      },
+      {
+        "name": "ECR-112003_SP8_R2測試",
+        "summary": ""
+      },
+      {
+        "name": "G2501_SP4",
+        "summary": ""
+      },
+      {
+        "name": "T2601_SP1",
+        "summary": ""
+      },
+      {
+        "name": "T2602",
+        "summary": ""
+      },
+      {
+        "name": "GMS2601",
+        "summary": ""
+      },
+      {
+        "name": "Gama Monitor System",
+        "summary": ""
+      },
+      {
+        "name": " 設定介面統一、優化 phase 2 - Config整合admin、重構",
+        "summary": ""
+      },
+      {
+        "name": "G2601",
+        "summary": ""
+      }
+    ]
+  }
+}
